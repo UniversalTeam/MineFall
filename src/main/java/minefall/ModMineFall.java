@@ -10,16 +10,18 @@ import minefall.items.ModItems;
 import minefall.libs.MCMod;
 import minefall.libs.ModReference;
 import minefall.proxies.CommonProxy;
-import minefall.plugins.*;
 import universalcore.libs.ReferenceCore;
 
 
 
-@Mod(modid = ModReference.MODID,name = ModReference.MODNAME,version = ModReference.VERSION,dependencies = "required-after:universalcore@[" + ReferenceCore.VERSION + ",)")
+@Mod(modid = ModReference.MODID, name = ModReference.MODNAME, version = ModReference.VERSION, dependencies = "required-after:universalcore@[" + ReferenceCore.VERSION + ",)")
 public class ModMineFall {
 
     @SidedProxy(clientSide = "minefall.proxies.ClientProxy", serverSide = "minefall.proxies.CommonProxy")
     public static CommonProxy proxy;
+
+	@Mod.Instance(ModReference.MODID)
+	public static ModMineFall instance;
 
     @Mod.EventHandler
     public void PreInit(FMLPreInitializationEvent event){
