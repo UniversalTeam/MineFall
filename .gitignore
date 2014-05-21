@@ -15,3 +15,5 @@ out
 *.iml
 *.ipr
 *.iws
+
+thumbs.db
