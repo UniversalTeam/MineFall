@@ -3,12 +3,12 @@ package minefall.blocks.cells;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraftforge.common.util.ForgeDirection;
-import universalcore.api.energy.EnergyCache;
+//import universalcore.api.energy.EnergyCache;
 import universalcore.api.energy.IEnergyCache;
 
-public class TileCell extends TileEntity implements IEnergyCache{
+public class TileCell extends TileEntity /*implements IEnergyCache*/{
 
-    protected EnergyCache storage = new EnergyCache(40000);
+    /*protected EnergyCache storage = new EnergyCache(40000);
 
     @Override
     public void readFromNBT(NBTTagCompound nbt) {
@@ -47,5 +47,5 @@ public class TileCell extends TileEntity implements IEnergyCache{
     public int getMaxEnergyStored(ForgeDirection direction) {
 
         return storage.getMaxEnergyStored(direction);
-    }
+    }*/
 }

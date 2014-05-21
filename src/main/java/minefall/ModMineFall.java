@@ -7,7 +7,6 @@ import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import minefall.blocks.ModBlocks;
 import minefall.items.ModItems;
-import minefall.libs.MCMod;
 import minefall.libs.ModReference;
 import minefall.proxies.CommonProxy;
 import universalcore.libs.ReferenceCore;
@@ -26,7 +25,6 @@ public class ModMineFall {
     @Mod.EventHandler
     public void PreInit(FMLPreInitializationEvent event){
 
-        MCMod.MetaMcMod();
         ModBlocks.preInit();
         ModItems.PreInit();
         proxy.registerRenderers();
