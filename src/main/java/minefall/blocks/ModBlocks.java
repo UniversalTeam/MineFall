@@ -10,19 +10,19 @@ import net.minecraft.creativetab.CreativeTabs;
 
 public class ModBlocks{
 
-    public static Block EnergyPipe;
-    public static Block TitanCargo;
+    public static Block energyPipe;
+    public static Block titanCargo;
 
-    public static Block CellT1;
+    public static Block cellT1;
 
     public static void preInit(){
 
-        EnergyPipe = new BlockEnergyPipe(Material.glass).setHardness(2.0F).setCreativeTab(CreativeTabs.tabBlock);
-        GameRegistry.registerBlock(EnergyPipe, "energypipe");
+        energyPipe = new BlockEnergyPipe(Material.glass).setHardness(2.0F).setCreativeTab(CreativeTabs.tabBlock).setBlockName("EnergyPipe");
+        GameRegistry.registerBlock(energyPipe, "Energy Pipe");
         GameRegistry.registerTileEntity(TileEnergyPipe.class, "energypipe");
 
-        CellT1 = new BlockCell(Material.glass).setHardness(10.0F).setCreativeTab(CreativeTabs.tabBlock);
-        GameRegistry.registerBlock(CellT1, "cell");
+        cellT1 = new BlockCell(Material.glass).setHardness(10.0F).setCreativeTab(CreativeTabs.tabBlock).setBlockName("Cell Tier 1");
+        GameRegistry.registerBlock(cellT1, "cell");
         GameRegistry.registerTileEntity(TileCell.class, "cell");
     }
 }

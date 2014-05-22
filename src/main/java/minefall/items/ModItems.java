@@ -1,32 +1,44 @@
 package minefall.items;
 
+import cpw.mods.fml.common.registry.GameRegistry;
+import minefall.items.ammunition.PlasmaAmmunition;
+import minefall.items.weapon.AssaultRifle;
 import net.minecraft.item.Item;
 
 public class ModItems{
 
-    public static Item Shotgun;
-    public static Item Pistol;
-    public static Item SPistol;
-    public static Item Sniper;
+    //Weapons Generic
+    public static Item shotgun;
+    public static Item pistol;
+    public static Item sPistol;
+    public static Item sniper;
     public static Item SMG;
-    public static Item AR;
+    public static Item assualtRifle;
 
-    public static Item SwiftM1;
-    public static Item MidM1;
-    public static Item OgreM1;
+    //Special Weapons
+    public static Item swiftM1;
+    public static Item midM1;
+    public static Item ogreM1;
 
-    public static Item Swift2;
-    public static Item MidM2;
-    public static Item OgreM2;
+    public static Item swift2;
+    public static Item midM2;
+    public static Item ogreM2;
 
-    public static Item Swift3;
-    public static Item MidM3;
-    public static Item OgreM3;
+    public static Item swift3;
+    public static Item midM3;
+    public static Item ogreM3;
+
+    //Ammunitions
+
+    public static Item plasmaAmmunition;
 
 
     public static void PreInit(){
+        plasmaAmmunition = new PlasmaAmmunition().setUnlocalizedName("plasmaAmmunition");
+        GameRegistry.registerItem(plasmaAmmunition, "Plasma Ammunition");
 
+        assualtRifle = new AssaultRifle();
+        GameRegistry.registerItem(assualtRifle, "Assualt Rifle");
     //    Shotgun = new Gun();
-
     }
 }
