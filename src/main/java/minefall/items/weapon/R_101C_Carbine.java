@@ -11,8 +11,8 @@ import net.minecraft.world.World;
 /**
  *@author SeamusFD
  */
-public class AssaultRifle extends Item{
-    public AssaultRifle() {
+public class R_101C_Carbine extends Item{
+    public R_101C_Carbine() {
 
         super();
         setUnlocalizedName("assualtRifle");
