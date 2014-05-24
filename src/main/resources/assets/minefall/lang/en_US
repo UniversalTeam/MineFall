@@ -1,15 +1,5 @@
-//en_US File!
-
-//Blocks
-
-energypipe=Energy Pipe
-
-shotgun=Shot Gun
-pistol=Pistol
-smg=SMG
-ar=Assault Rifle
-sniper=Sniper
-spistol=Smart Pistol
+tile.EnergyPipe.name=Energy Pipe
+item.plasmaAmmunitionT1.name=Plasma Ammunition Tier 1
 
 
 
