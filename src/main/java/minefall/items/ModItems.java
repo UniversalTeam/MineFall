@@ -1,6 +1,7 @@
 package minefall.items;
 
 import cpw.mods.fml.common.registry.GameRegistry;
+import cpw.mods.fml.common.registry.LanguageRegistry;
 import minefall.items.ammunition.PlasmaAmmunition;
 import minefall.items.weapon.R_101C_Carbine;
 import net.minecraft.item.Item;
@@ -65,10 +66,12 @@ public class ModItems{
 
     public static void PreInit(){
         plasmaAmmunition = new PlasmaAmmunition();
-        GameRegistry.registerItem(plasmaAmmunition, "Plasma Ammunition");
+        GameRegistry.registerItem(plasmaAmmunition, "plasmaAmmuntion");
+        LanguageRegistry.addName(plasmaAmmunition, "Plasma Ammunition");
 
         r_101C_Carbine = new R_101C_Carbine();
-        GameRegistry.registerItem(r_101C_Carbine, "R-101C Carbine");
+        GameRegistry.registerItem(r_101C_Carbine, "r_101C_Carbine");
+        LanguageRegistry.addName(r_101C_Carbine, "R-101C Carbine");
     //    Shotgun = new Gun();
     }
 }

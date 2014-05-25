@@ -26,7 +26,7 @@ public class PlasmaBolt extends EntityThrowable{
     @Override
     protected void onImpact(MovingObjectPosition movingobjectposition) {
         if (movingobjectposition.entityHit != null) {
-            byte b0 = 0;
+            byte b0 = 10;
 
             if (movingobjectposition.entityHit instanceof EntityBlaze) {
                 b0 = 3;

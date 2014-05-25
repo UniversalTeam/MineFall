@@ -1,6 +1,7 @@
 package minefall.blocks;
 
 import cpw.mods.fml.common.registry.GameRegistry;
+import cpw.mods.fml.common.registry.LanguageRegistry;
 import minefall.blocks.cells.BlockCell;
 import minefall.blocks.cells.TileCell;
 import minefall.blocks.pipes.*;
@@ -20,9 +21,11 @@ public class ModBlocks{
         energyPipe = new BlockEnergyPipe(Material.glass).setHardness(2.0F).setCreativeTab(CreativeTabs.tabBlock).setBlockName("EnergyPipe");
         GameRegistry.registerBlock(energyPipe, "Energy Pipe");
         GameRegistry.registerTileEntity(TileEnergyPipe.class, "energypipe");
+        LanguageRegistry.addName(energyPipe, "Energy Pipe");
 
         cellT1 = new BlockCell(Material.glass).setHardness(10.0F).setCreativeTab(CreativeTabs.tabBlock).setBlockName("Cell Tier 1");
         GameRegistry.registerBlock(cellT1, "cell");
         GameRegistry.registerTileEntity(TileCell.class, "cell");
+        LanguageRegistry.addName(cellT1, "Energy Cell Tier 1");
     }
 }

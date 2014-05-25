@@ -5,6 +5,7 @@ import cpw.mods.fml.relauncher.SideOnly;
 import minefall.ModMineFall;
 import minefall.entities.PlasmaBolt;
 import minefall.items.ModItems;
+import minefall.libs.ModReference;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;
@@ -23,25 +24,11 @@ public class R_101C_Carbine extends Item{
         setUnlocalizedName("r_101C_Carbine");
         setCreativeTab(CreativeTabs.tabCombat);
     }
-// THIS IS AN ATTEMPT AT AN ICON, DID NOT WORK BEFORE I HAD TO PUSH AND GO TO BED
-//    @SideOnly(Side.CLIENT)
-//    private IIcon[] icons;
-//
-//    @SideOnly(Side.CLIENT)
-//    @Override
-//    public void registerIcons(IIconRegister par1IconRegister) {
-//        icons = new IIcon[2];
-//
-//        for (int i = 0; i < icons.length; i++)
-//        {
-//            icons[i] = par1IconRegister.registerIcon(ModMineFall.modid + ":" + (this.getUnlocalizedName().substring(5)) + i);
-//        }
-//    }
-//
-//    @Override
-//    public IIcon getIconFromDamage(int par1) {
-//        return icons[par1];
-//    }
+
+    @Override
+    public void registerIcons(IIconRegister par1IconRegister) {
+        this.itemIcon = par1IconRegister.registerIcon(ModReference.MODID + ":r_101C_Carbine");
+    }
 
     @Override
     public ItemStack onItemRightClick(ItemStack par1ItemStack, World world, EntityPlayer player) {
