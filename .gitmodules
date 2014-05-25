@@ -1,3 +1,6 @@
+[submodule "MineFall"]
+	path = MineFall
+	url = https://github.com/UniversalTeam/MineFall.git
 [submodule "UniversalCore"]
 	path = UniversalCore
 	url = https://github.com/UniversalTeam/UniversalCore.git
