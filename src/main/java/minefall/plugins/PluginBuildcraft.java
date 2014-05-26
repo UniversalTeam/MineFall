@@ -1,6 +1,8 @@
 package minefall.plugins;
 
-public class PluginBuildcraft extends universalcore.mods.PluginBuildcraft{
+import universalcore.compat.PluginBuildCraft;
+
+public class PluginBuildcraft extends PluginBuildCraft{
 
     public static void loadPlugin(){
 
