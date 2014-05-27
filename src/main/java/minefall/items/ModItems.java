@@ -2,6 +2,7 @@ package minefall.items;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
+import minefall.items.ammunition.Plasma;
 import minefall.items.ammunition.PlasmaAmmunition;
 import minefall.items.weapon.R_101C_Carbine;
 import net.minecraft.item.Item;
@@ -60,18 +61,27 @@ public class ModItems{
     public static Item the_icepick;
 
     //Ammunitions
-
     public static Item plasmaAmmunition;
 
+    //Crafting Only Items
+    public static Item plasma;
 
     public static void PreInit(){
+        //Ammunition
         plasmaAmmunition = new PlasmaAmmunition();
         GameRegistry.registerItem(plasmaAmmunition, "plasmaAmmuntion");
         LanguageRegistry.addName(plasmaAmmunition, "Plasma Ammunition");
 
+        //Weapons
         r_101C_Carbine = new R_101C_Carbine();
         GameRegistry.registerItem(r_101C_Carbine, "r_101C_Carbine");
         LanguageRegistry.addName(r_101C_Carbine, "R-101C Carbine");
+
+        //CrafingItems
+        plasma = new Plasma();
+        GameRegistry.registerItem(plasma, "plasma");
+        LanguageRegistry.addName(plasma, "Plasma");
+
     //    Shotgun = new Gun();
     }
 }

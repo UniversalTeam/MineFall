@@ -1,8 +1,5 @@
 package minefall.items.weapon;
 
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
-import minefall.ModMineFall;
 import minefall.entities.PlasmaBolt;
 import minefall.items.ModItems;
 import minefall.libs.ModReference;
@@ -11,7 +8,6 @@ import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.util.IIcon;
 import net.minecraft.world.World;
 
 /**

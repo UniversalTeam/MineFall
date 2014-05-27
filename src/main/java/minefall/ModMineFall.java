@@ -9,6 +9,7 @@ import minefall.blocks.ModBlocks;
 import minefall.items.ModItems;
 import minefall.libs.ModReference;
 import minefall.proxies.CommonProxy;
+import minefall.recipes.WeaponRecipes;
 import universalcore.libs.ReferenceCore;
 
 
@@ -27,6 +28,7 @@ public class ModMineFall {
 
         ModBlocks.preInit();
         ModItems.PreInit();
+        WeaponRecipes.PreInit();
         proxy.registerRenderers();
     }
 

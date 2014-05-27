@@ -11,6 +11,9 @@ import net.minecraft.world.World;
  *@author SeamusFD
  */
 public class PlasmaBolt extends EntityThrowable{
+
+    private float speed = 15f;
+
     public PlasmaBolt(World par1World) {
         super(par1World);
     }
@@ -24,6 +27,9 @@ public class PlasmaBolt extends EntityThrowable{
     }
 
     protected float getGravityVelocity() {
+        this.motionX*=speed;
+        this.motionY*=speed;
+        this.motionZ*=speed;
         return 0F;
     }
 
@@ -37,6 +43,10 @@ public class PlasmaBolt extends EntityThrowable{
             }
 
             movingobjectposition.entityHit.attackEntityFrom(DamageSource.causeThrownDamage(this, this.getThrower()), (float)b0);
+
+            if (!this.worldObj.isRemote) {
+                this.setDead();
+            }
         }
     }
 }
