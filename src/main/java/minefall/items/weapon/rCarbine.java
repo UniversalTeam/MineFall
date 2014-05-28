@@ -10,9 +10,9 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 
-public class R_101C_Carbine extends Item
+public class rCarbine extends Item
 {
-	public R_101C_Carbine()
+	public rCarbine()
 	{
 		this.setUnlocalizedName("rCarbine");
 		this.setCreativeTab(CreativeTabs.tabCombat);

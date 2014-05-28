@@ -6,7 +6,7 @@ import minefall.blocks.BlockEnergyPipe;
 import minefall.compat.MFPluginListener;
 import minefall.items.ammunition.ItemPlasma;
 import minefall.items.ammunition.ItemPlasmaAmmunition;
-import minefall.items.weapon.R_101C_Carbine;
+import minefall.items.weapon.EVA8Shotgun;
 import minefall.tileentity.TileCell;
 import minefall.tileentity.TileEnergyPipe;
 import net.minecraft.block.Block;
@@ -100,12 +100,14 @@ public class CommonProxy
 
 	public void initItems()
 	{
-        rCarbine = new R_101C_Carbine();
+        rCarbine = new minefall.items.weapon.rCarbine();
+        eVA8Shotgun = new EVA8Shotgun();
 		plasmaAmmunition = new ItemPlasmaAmmunition();
 		plasma = new ItemPlasma();
 
 		GameRegistry.registerItem(plasmaAmmunition, "plasmaAmmuntion");
 		GameRegistry.registerItem(rCarbine, "rCarbine");
+        GameRegistry.registerItem(eVA8Shotgun, "eVA8Shotgun");
 		GameRegistry.registerItem(plasma, "plasma");
 	}
 

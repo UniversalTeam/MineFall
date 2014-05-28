@@ -2,5 +2,6 @@ tile.energyPipe.name=Energy Pipe
 tile.cellT1.name=Cell Tier 1
 
 item.rCarbine.name=R_101C_Carbine
+item.eVA8Shotgun.name=EVA-8 Shotgun
 item.plasmaAmmunition.name=Plasma Ammunition
 item.plasma.name=Plasma
