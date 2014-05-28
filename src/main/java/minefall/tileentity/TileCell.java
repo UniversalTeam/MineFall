@@ -1,10 +1,8 @@
-package minefall.blocks.cells;
+package minefall.tileentity;
 
-import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.tileentity.TileEntity;
-import net.minecraftforge.common.util.ForgeDirection;
+
 //import universalcore.api.energy.EnergyCache;
-import universalcore.api.energy.IEnergyCache;
 
 public class TileCell extends TileEntity /*implements IEnergyCache*/{
 

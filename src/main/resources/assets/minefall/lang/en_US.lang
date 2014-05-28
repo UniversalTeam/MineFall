@@ -1,17 +1,6 @@
-tile.EnergyPipe.name=Energy Pipe
-item.plasmaAmmunitionT1.name=Plasma Ammunition Tier 1
+tile.energyPipe.name=Energy Pipe
+tile.cellT1.name=Cell Tier 1
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+item.r_101C_Carbine.name=R_101C_Carbine
+item.plasmaAmmunition.name=Plasma Ammunition
+item.plasma.name=Plasma

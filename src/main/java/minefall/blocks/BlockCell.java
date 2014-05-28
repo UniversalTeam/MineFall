@@ -1,14 +1,19 @@
-package minefall.blocks.cells;
+package minefall.blocks;
 
+import minefall.tileentity.TileCell;
 import net.minecraft.block.BlockContainer;
 import net.minecraft.block.material.Material;
+import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.World;
 
 public class BlockCell extends BlockContainer{
 
-    public BlockCell(Material material){
+    public BlockCell(){
         super(Material.glass);
+	    this.setHardness(10.0F);
+	    this.setCreativeTab(CreativeTabs.tabBlock);
+	    this.setBlockName("cellT1");
     }
 
     @Override

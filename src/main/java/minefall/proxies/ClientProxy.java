@@ -1,25 +1,36 @@
 package minefall.proxies;
 
 import cpw.mods.fml.client.registry.ClientRegistry;
-import cpw.mods.fml.client.registry.RenderingRegistry;
-import minefall.blocks.ModBlocks;
-import minefall.blocks.cells.TileCell;
-import minefall.blocks.pipes.TileEnergyPipe;
-import minefall.renderers.*;
-import net.minecraftforge.client.MinecraftForgeClient;
+import minefall.tileentity.TileCell;
+import minefall.tileentity.TileEnergyPipe;
+import minefall.renderers.RendererCell;
+import minefall.renderers.RendererPipe;
 
-public class ClientProxy extends CommonProxy{
+public class ClientProxy extends CommonProxy
+{
+	@Override
+	public void preInit()
+	{
+		super.preInit();
 
-    public static final RendererPipe pipeRender = new RendererPipe();
+		initTESRs();
+	}
 
-    public void registerRenderers(){
-         ClientRegistry.bindTileEntitySpecialRenderer(TileEnergyPipe.class, new RendererPipe());
-         ClientRegistry.bindTileEntitySpecialRenderer(TileCell.class, new RendererCell());
+	@Override
+	public void init()
+	{
+		super.init();
+	}
 
-        registerItemRenderers();
-    }
+	@Override
+	public void postInit()
+	{
+		super.postInit();
+	}
 
-    public void registerItemRenderers(){
-
-    }
+	public void initTESRs()
+	{
+		ClientRegistry.bindTileEntitySpecialRenderer(TileEnergyPipe.class, new RendererPipe());
+		ClientRegistry.bindTileEntitySpecialRenderer(TileCell.class, new RendererCell());
+	}
 }

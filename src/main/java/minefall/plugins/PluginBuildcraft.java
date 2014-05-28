@@ -1,11 +1,19 @@
 package minefall.plugins;
 
-import universalcore.compat.PluginBuildCraft;
+import universalcore.api.compat.UCPlugin;
 
-public class PluginBuildcraft extends PluginBuildCraft{
+@UCPlugin(targetID = "MineFall", author = "UniversalTeam", requires = "BuildCraft")
+public class PluginBuildcraft
+{
+	@UCPlugin.Handle
+	public void handle()
+	{
 
-    public static void loadPlugin(){
+	}
 
+	@UCPlugin.HandleClient
+	public void handleClient()
+	{
 
-    }
+	}
 }
