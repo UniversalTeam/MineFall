@@ -1,6 +1,7 @@
 package minefall.proxies;
 
 import cpw.mods.fml.client.registry.ClientRegistry;
+import minefall.compat.MFPluginListener;
 import minefall.tileentity.TileCell;
 import minefall.tileentity.TileEnergyPipe;
 import minefall.renderers.RendererCell;
@@ -20,6 +21,8 @@ public class ClientProxy extends CommonProxy
 	public void init()
 	{
 		super.init();
+
+		MFPluginListener.handleClient();
 	}
 
 	@Override

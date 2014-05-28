@@ -3,6 +3,7 @@ package minefall.proxies;
 import cpw.mods.fml.common.registry.GameRegistry;
 import minefall.blocks.BlockCell;
 import minefall.blocks.BlockEnergyPipe;
+import minefall.compat.MFPluginListener;
 import minefall.items.ammunition.ItemPlasma;
 import minefall.items.ammunition.ItemPlasmaAmmunition;
 import minefall.items.weapon.R_101C_Carbine;
@@ -77,7 +78,7 @@ public class CommonProxy
 
 	public void init()
 	{
-
+		MFPluginListener.handleCommon();
 	}
 
 	public void postInit()

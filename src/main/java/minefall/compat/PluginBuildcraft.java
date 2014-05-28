@@ -1,4 +1,4 @@
-package minefall.plugins;
+package minefall.compat;
 
 import universalcore.api.compat.UCPlugin;
 
