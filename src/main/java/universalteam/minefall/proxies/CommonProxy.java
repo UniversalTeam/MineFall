@@ -7,6 +7,7 @@ import universalteam.minefall.compat.MFPluginListener;
 import universalteam.minefall.items.ammunition.ItemPlasma;
 import universalteam.minefall.items.ammunition.ItemPlasmaAmmunition;
 import universalteam.minefall.items.weapon.EVA8Shotgun;
+import universalteam.minefall.items.weapon.rCarbine;
 import universalteam.minefall.tileentity.TileCell;
 import universalteam.minefall.tileentity.TileEnergyPipe;
 import net.minecraft.block.Block;
@@ -22,7 +23,7 @@ public class CommonProxy
 	public static Item rCarbine;
 	public static Item rCompactSMG;
 	public static Item smartPistolMk5;
-	public static Item eVA8Shotgun;                   //TODO: need simpler in-code names EDIT: This is done
+	public static Item eVA8Shotgun;
 	public static Item longbowSniper;
 	public static Item SMG;
 	public static Item g2A4Rifle;
@@ -100,14 +101,14 @@ public class CommonProxy
 
 	public void initItems()
 	{
-        rCarbine = new universalteam.minefall.items.weapon.rCarbine();
-        eVA8Shotgun = new EVA8Shotgun();
+		rCarbine = new rCarbine();
+		eVA8Shotgun = new EVA8Shotgun();
 		plasmaAmmunition = new ItemPlasmaAmmunition();
 		plasma = new ItemPlasma();
 
 		GameRegistry.registerItem(plasmaAmmunition, "plasmaAmmuntion");
 		GameRegistry.registerItem(rCarbine, "rCarbine");
-        GameRegistry.registerItem(eVA8Shotgun, "eVA8Shotgun");
+		GameRegistry.registerItem(eVA8Shotgun, "eVA8Shotgun");
 		GameRegistry.registerItem(plasma, "plasma");
 	}
 

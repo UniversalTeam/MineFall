@@ -10,10 +10,6 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 
-/**
- * Created by SeamusFD on 5/28/14.
- * All rights belong to me!!
- */
 public class EVA8Shotgun extends Item{
     public EVA8Shotgun()
     {

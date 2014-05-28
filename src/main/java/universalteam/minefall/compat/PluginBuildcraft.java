@@ -1,6 +1,6 @@
 package universalteam.minefall.compat;
 
-import universalcore.api.compat.UCPlugin;
+import universalteam.universalcore.api.compat.UCPlugin;
 
 @UCPlugin(targetID = "MineFall", author = "UniversalTeam", requires = "BuildCraft")
 public class PluginBuildcraft

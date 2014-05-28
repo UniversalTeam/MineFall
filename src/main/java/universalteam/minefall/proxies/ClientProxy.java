@@ -43,6 +43,6 @@ public class ClientProxy extends CommonProxy
 
 	public void initItemRenders()
 	{
-		MinecraftForgeClient.registerItemRenderer(eVA8Shotgun, new RenderItemShotgun()); //TODO: apply to proper gun EDIT: This is done now
+		MinecraftForgeClient.registerItemRenderer(eVA8Shotgun, new RenderItemShotgun());
 	}
 }

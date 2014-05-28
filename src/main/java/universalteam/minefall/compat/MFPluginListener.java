@@ -4,8 +4,8 @@ import com.google.common.base.Splitter;
 import com.google.common.collect.Lists;
 import cpw.mods.fml.common.Loader;
 import universalteam.minefall.libs.ModReference;
-import universalcore.api.compat.IPluginListener;
-import universalcore.api.compat.UCPlugin;
+import universalteam.universalcore.api.compat.IPluginListener;
+import universalteam.universalcore.api.compat.UCPlugin;
 
 import java.lang.reflect.Method;
 import java.util.Arrays;
