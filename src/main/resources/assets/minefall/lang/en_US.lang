@@ -1,6 +1,6 @@
 tile.energyPipe.name=Energy Pipe
 tile.cellT1.name=Cell Tier 1
 
-item.r_101C_Carbine.name=R_101C_Carbine
+item.rCarbine.name=R_101C_Carbine
 item.plasmaAmmunition.name=Plasma Ammunition
 item.plasma.name=Plasma

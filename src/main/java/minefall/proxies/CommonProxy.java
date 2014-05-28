@@ -19,49 +19,49 @@ public class CommonProxy
 	public static Block energyPipe;
 	public static Block cellT1;
 
-	public static Item r_101C_Carbine;
-	public static Item r_97_Compact_SMG;
-	public static Item smart_Pistol_Mk5;
-	public static Item eVA_8_Shotgun;                   //TODO: need simpler in-code names
-	public static Item longbow_DMR_Sniper;
-	public static Item cAR_SMG;
-	public static Item g2A4_Rifle;
-	public static Item hemlok_BF_R;
-	public static Item krabr_AP_Sniper;
-	public static Item spitfire_LMG;
+	public static Item rCarbine;
+	public static Item rCompactSMG;
+	public static Item smartPistolMk5;
+	public static Item eVA8Shotgun;                   //TODO: need simpler in-code names EDIT: This is done
+	public static Item longbowSniper;
+	public static Item SMG;
+	public static Item g2A4Rifle;
+	public static Item hemlok;
+	public static Item krabrSniper;
+	public static Item spitfireLMG;
 
-	public static Item b3_Wingman;
-	public static Item hammond_P2011;
-	public static Item rE_45_Autopistol;
+	public static Item b3Wingman;
+	public static Item hammondP2;
+	public static Item rAutopistol;
 
-	public static Item sideWinder_AT_SMR;
-	public static Item archer_Heavy_Rocket;
+	public static Item sideWinderSMR;
+	public static Item HeavyRocket;
 	public static Item mGL;
-	public static Item charge_Rifle;
+	public static Item chargeRifle;
 
-	public static Item data_Knife;
-	public static Item frag_Grenade;
-	public static Item satchel_Charge;
-	public static Item arc_Grenade;
-	public static Item arc_Mine;
+	public static Item Knife;
+	public static Item fragGrenade;
+	public static Item satchelCharge;
+	public static Item arcGrenade;
+	public static Item arcMine;
 
 	public static Item cloak;
 	public static Item stim;
-	public static Item active_Radar_Pulse;
+	public static Item activeRadarPulse;
 
-	public static Item enhanced_Parkour_Kit;
-	public static Item explosive_Pack;
-	public static Item power_Cell;
-	public static Item quick_Reload_Kit;
-	public static Item run_N_Gun_Kit;
-	public static Item stealth_Kit;
+	public static Item enhancedParkourKit;
+	public static Item explosivePack;
+	public static Item powerCell;
+	public static Item quickReloadKit;
+	public static Item runNGunKit;
+	public static Item stealthKit;
 
-	public static Item dome_Shield_Battery;
-	public static Item minion_Detector;
-	public static Item warpfall_Transmitter;
-	public static Item dead_Mans_Trigger;
-	public static Item guardian_Chip;
-	public static Item the_icepick;
+	public static Item domeShieldBattery;
+	public static Item minionDetector;
+	public static Item warpfallTransmitter;
+	public static Item deadMansTrigger;
+	public static Item guardianChip;
+	public static Item theIcepick;
 
 	public static Item plasmaAmmunition;
 
@@ -100,12 +100,12 @@ public class CommonProxy
 
 	public void initItems()
 	{
-		r_101C_Carbine = new R_101C_Carbine();
+        rCarbine = new R_101C_Carbine();
 		plasmaAmmunition = new ItemPlasmaAmmunition();
 		plasma = new ItemPlasma();
 
 		GameRegistry.registerItem(plasmaAmmunition, "plasmaAmmuntion");
-		GameRegistry.registerItem(r_101C_Carbine, "r_101C_Carbine");
+		GameRegistry.registerItem(rCarbine, "rCarbine");
 		GameRegistry.registerItem(plasma, "plasma");
 	}
 

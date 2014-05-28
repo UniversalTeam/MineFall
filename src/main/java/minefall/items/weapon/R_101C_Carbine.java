@@ -14,7 +14,7 @@ public class R_101C_Carbine extends Item
 {
 	public R_101C_Carbine()
 	{
-		this.setUnlocalizedName("r_101C_Carbine");
+		this.setUnlocalizedName("rCarbine");
 		this.setCreativeTab(CreativeTabs.tabCombat);
 	}
 
@@ -28,7 +28,7 @@ public class R_101C_Carbine extends Item
 	public ItemStack onItemRightClick(ItemStack par1ItemStack, World world, EntityPlayer player)
 	{
 		if (player.capabilities.isCreativeMode || player.inventory.consumeInventoryItem(CommonProxy.plasmaAmmunition))
-			--par1ItemStack.stackSize;
+//			--par1ItemStack.stackSize;
 
 		world.playSoundAtEntity(player, "random.bow", 0.5f, 0.4f / (itemRand.nextFloat() * 0.4f + 0.8f));
 
