@@ -3,8 +3,8 @@ package universalteam.minefall.packets;
 import cpw.mods.fml.common.network.NetworkRegistry;
 import io.netty.buffer.ByteBuf;
 import io.netty.channel.ChannelHandlerContext;
-import universalteam.minefall.libs.ModReference;
 import net.minecraft.world.World;
+import universalteam.minefall.libs.ModReference;
 
 public abstract class PacketInt extends AbstractPacket
 {

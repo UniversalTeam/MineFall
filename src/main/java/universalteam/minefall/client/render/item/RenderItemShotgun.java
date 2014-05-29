@@ -1,6 +1,5 @@
 package universalteam.minefall.client.render.item;
 
-import codechicken.lib.math.MathHelper;
 import codechicken.lib.render.CCModel;
 import codechicken.lib.render.CCRenderState;
 import codechicken.lib.vec.RedundantTransformation;
@@ -13,9 +12,9 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.client.IItemRenderer;
 
-import static codechicken.lib.math.MathHelper.pi;
-
 import java.util.Map;
+
+import static codechicken.lib.math.MathHelper.pi;
 
 public class RenderItemShotgun implements IItemRenderer
 {

@@ -1,19 +1,19 @@
 package universalteam.minefall.proxies;
 
 import cpw.mods.fml.common.registry.GameRegistry;
+import net.minecraft.block.Block;
+import net.minecraft.init.Items;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
 import universalteam.minefall.blocks.BlockCell;
 import universalteam.minefall.blocks.BlockEnergyPipe;
 import universalteam.minefall.compat.MFPluginListener;
 import universalteam.minefall.items.ammunition.ItemPlasma;
 import universalteam.minefall.items.ammunition.ItemPlasmaAmmunition;
-import universalteam.minefall.items.weapon.EVA8Shotgun;
-import universalteam.minefall.items.weapon.rCarbine;
+import universalteam.minefall.items.weapon.ItemEVA8Shotgun;
+import universalteam.minefall.items.weapon.ItemrCarbine;
 import universalteam.minefall.tileentity.TileCell;
 import universalteam.minefall.tileentity.TileEnergyPipe;
-import net.minecraft.block.Block;
-import net.minecraft.init.Items;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
 
 public class CommonProxy
 {
@@ -101,8 +101,8 @@ public class CommonProxy
 
 	public void initItems()
 	{
-		rCarbine = new rCarbine();
-		eVA8Shotgun = new EVA8Shotgun();
+		rCarbine = new ItemrCarbine();
+		eVA8Shotgun = new ItemEVA8Shotgun();
 		plasmaAmmunition = new ItemPlasmaAmmunition();
 		plasma = new ItemPlasma();
 

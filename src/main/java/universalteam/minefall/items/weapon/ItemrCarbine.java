@@ -1,18 +1,18 @@
 package universalteam.minefall.items.weapon;
 
-import universalteam.minefall.entities.PlasmaBolt;
-import universalteam.minefall.libs.ModReference;
-import universalteam.minefall.proxies.CommonProxy;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
+import universalteam.minefall.entities.PlasmaBolt;
+import universalteam.minefall.libs.ModReference;
+import universalteam.minefall.proxies.CommonProxy;
 
-public class rCarbine extends Item
+public class ItemrCarbine extends Item
 {
-	public rCarbine()
+	public ItemrCarbine()
 	{
 		this.setUnlocalizedName("rCarbine");
 		this.setCreativeTab(CreativeTabs.tabCombat);

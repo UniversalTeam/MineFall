@@ -1,21 +1,20 @@
-package universalteam.minefall.renderers;
+package universalteam.minefall.client.render.tile;
 
-import universalteam.minefall.libs.ModReference;
-import universalteam.minefall.models.ModelPipe;
 import net.minecraft.client.renderer.tileentity.TileEntitySpecialRenderer;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.ResourceLocation;
 import org.lwjgl.opengl.GL11;
+import universalteam.minefall.libs.ModReference;
+import universalteam.minefall.models.ModelCell;
 
-
-public class RendererPipe extends TileEntitySpecialRenderer
+public class TESRCell extends TileEntitySpecialRenderer
 {
-	private static final ResourceLocation texture = new ResourceLocation(ModReference.MODID + ":" + "textures/models/texturepipe.png");
-	private ModelPipe model;
+	private static final ResourceLocation texture = new ResourceLocation(ModReference.MODID + ":" + "textures/models/texturecell.png");
+	private ModelCell model;
 
-	public RendererPipe()
+	public TESRCell()
 	{
-		this.model = new ModelPipe();
+		this.model = new ModelCell();
 	}
 
 	public void renderTileEntityAt(TileEntity tileentity, double x, double y, double z, float f)
@@ -30,4 +29,3 @@ public class RendererPipe extends TileEntitySpecialRenderer
 		GL11.glPopMatrix();
 	}
 }
-

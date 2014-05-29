@@ -1,13 +1,13 @@
 package universalteam.minefall.proxies;
 
 import cpw.mods.fml.client.registry.ClientRegistry;
+import net.minecraftforge.client.MinecraftForgeClient;
 import universalteam.minefall.client.render.item.RenderItemShotgun;
+import universalteam.minefall.client.render.tile.TESRCell;
+import universalteam.minefall.client.render.tile.TESRPipe;
 import universalteam.minefall.compat.MFPluginListener;
 import universalteam.minefall.tileentity.TileCell;
 import universalteam.minefall.tileentity.TileEnergyPipe;
-import universalteam.minefall.renderers.RendererCell;
-import universalteam.minefall.renderers.RendererPipe;
-import net.minecraftforge.client.MinecraftForgeClient;
 
 public class ClientProxy extends CommonProxy
 {
@@ -37,8 +37,8 @@ public class ClientProxy extends CommonProxy
 
 	public void initTESRs()
 	{
-		ClientRegistry.bindTileEntitySpecialRenderer(TileEnergyPipe.class, new RendererPipe());
-		ClientRegistry.bindTileEntitySpecialRenderer(TileCell.class, new RendererCell());
+		ClientRegistry.bindTileEntitySpecialRenderer(TileEnergyPipe.class, new TESRPipe());
+		ClientRegistry.bindTileEntitySpecialRenderer(TileCell.class, new TESRCell());
 	}
 
 	public void initItemRenders()
