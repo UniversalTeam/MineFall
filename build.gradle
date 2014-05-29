@@ -37,6 +37,9 @@ dependencies {
 minecraft {
     version = "${config.version.minecraft}-${config.version.forge}"
     assetDir = "eclipse/assets"
+
+    replaceIn "universalteam.minefall.ModMineFall.java"
+    replace "@UCVERSION", config.version.UniversalCore
 }
 processResources
 {
