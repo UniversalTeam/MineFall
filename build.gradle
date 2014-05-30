@@ -32,6 +32,7 @@ archivesBaseName = "MineFall"
 dependencies {
     compile "codechicken:CodeChickenLib:${config.version.minecraft}-${config.version.CCL}:dev"
     compile "codechicken:ForgeMultipart:${config.version.minecraft}-${config.version.FMP}:dev"
+    compile project(":UniversalCore")
 }
 
 minecraft {
