@@ -11,9 +11,9 @@ public class ItemArmorIMC extends ItemArmor
 {
 	private int armorType;
 
-	public ItemArmorIMC(ArmorMaterial armourmaterial, int renderIndex, int armorType)
+	public ItemArmorIMC(ArmorMaterial armourmaterial2, int renderIndex, int armorType)
 	{
-		super(armourmaterial, renderIndex, armorType);
+		super(armourmaterial2, renderIndex, armorType);
 		this.setCreativeTab(CreativeTabs.tabCombat);
 		this.armorType = armorType;
 	}

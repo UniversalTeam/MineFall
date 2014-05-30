@@ -9,7 +9,7 @@ import net.minecraft.util.MathHelper;
 import net.minecraft.util.ResourceLocation;
 import org.lwjgl.opengl.GL11;
 import org.lwjgl.opengl.GL12;
-import universalteam.minefall.entities.EntityPlasmaBolt;
+import universalteam.minefall.entities.EntityBulletBasic;
 import universalteam.minefall.libs.ModReference;
 
 /**
@@ -20,7 +20,7 @@ public class RenderBulletBasic extends Render {
 
     private static final ResourceLocation bulletTextures = new ResourceLocation(ModReference.MODID + ":eVA8Shotgun");
 
-    public void doRender(EntityPlasmaBolt var1, double var2, double var4, double var6, float var8, float var9) {
+    public void doRender(EntityBulletBasic var1, double var2, double var4, double var6, float var8, float var9) {
         this.bindEntityTexture(var1);
         GL11.glPushMatrix();
         GL11.glTranslatef((float)var9, (float)var9, (float)var9);
@@ -38,7 +38,7 @@ public class RenderBulletBasic extends Render {
         float f9 = (float)(10 + b0 * 10) / 32.0F;
         float f10 = 0.05625F;
         GL11.glEnable(GL12.GL_RESCALE_NORMAL);
-        float f11 = (float)var1.bulletShake - var9;
+        float f11 = (float)0 - var9;
 
         if (f11 > 0.0F)
         {
@@ -80,7 +80,7 @@ public class RenderBulletBasic extends Render {
         GL11.glPopMatrix();
     }
 
-    protected ResourceLocation getEntityTexture(EntityPlasmaBolt entityplasmabolt)
+    protected ResourceLocation getEntityTexture(EntityBulletBasic entityplasmabolt)
     {
         return bulletTextures;
     }
@@ -90,11 +90,11 @@ public class RenderBulletBasic extends Render {
      */
     protected ResourceLocation getEntityTexture(Entity par1Entity)
     {
-        return this.getEntityTexture((EntityPlasmaBolt)par1Entity);
+        return this.getEntityTexture((EntityBulletBasic)par1Entity);
     }
 
     @Override
     public void doRender(Entity var1, double var2, double var4, double var6, float var8, float var9) {
-        this.doRender((EntityPlasmaBolt)var1, var2, var4, var6, var8, var9);
+        this.doRender((EntityBulletBasic)var1, var2, var4, var6, var8, var9);
     }
 }

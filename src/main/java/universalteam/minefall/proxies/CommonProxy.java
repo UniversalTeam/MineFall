@@ -2,6 +2,7 @@ package universalteam.minefall.proxies;
 
 import cpw.mods.fml.client.registry.RenderingRegistry;
 import cpw.mods.fml.common.registry.GameRegistry;
+import cpw.mods.fml.common.registry.LanguageRegistry;
 import net.minecraft.block.Block;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Items;
@@ -10,6 +11,7 @@ import net.minecraft.item.ItemArmor.ArmorMaterial;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.util.EnumHelper;
 import universalteam.minefall.armour.ItemArmorIMC;
+import universalteam.minefall.armour.ItemArmourMCOR;
 import universalteam.minefall.blocks.BlockCell;
 import universalteam.minefall.blocks.BlockEnergyPipe;
 import universalteam.minefall.compat.MFPluginListener;
@@ -76,11 +78,17 @@ public class CommonProxy
 
     //Armors
     public static ArmorMaterial armorMaterialIMC = EnumHelper.addArmorMaterial("IMC", 33, new int[] {3, 8, 6, 3}, 10);
+    public static ArmorMaterial armorMaterialMCOR = EnumHelper.addArmorMaterial("MCOR", 33, new int[] {3, 8, 6, 3}, 10);
 
     public static Item helmetIMC;
     public static Item chestplateIMC;
     public static Item leggingsIMC;
     public static Item bootsIMC;
+
+    public static Item helmetMCOR;
+    public static Item chestplateMCOR;
+    public static Item leggingsMCOR;
+    public static Item bootsMCOR;
 
 	public void preInit()
 	{
@@ -126,6 +134,12 @@ public class CommonProxy
         leggingsIMC = new ItemArmorIMC(CommonProxy.armorMaterialIMC, 5, 2);
         bootsIMC = new ItemArmorIMC(CommonProxy.armorMaterialIMC, 5, 3);
 
+        RenderingRegistry.addNewArmourRendererPrefix("6");
+        helmetMCOR = new ItemArmourMCOR(CommonProxy.armorMaterialMCOR, 6, 0);
+        chestplateMCOR = new ItemArmourMCOR(CommonProxy.armorMaterialMCOR, 6, 1);
+        leggingsMCOR = new ItemArmourMCOR(CommonProxy.armorMaterialMCOR, 6, 2);
+        bootsMCOR = new ItemArmourMCOR(CommonProxy.armorMaterialMCOR, 6, 3);
+
 
         GameRegistry.registerItem(plasmaAmmunition, "plasmaAmmuntion");
 		GameRegistry.registerItem(rCarbine, "rCarbine");
@@ -136,6 +150,11 @@ public class CommonProxy
         GameRegistry.registerItem(chestplateIMC, "chestplateIMC");
         GameRegistry.registerItem(leggingsIMC, "leggingsIMC");
         GameRegistry.registerItem(bootsIMC, "bootsIMC");
+
+        GameRegistry.registerItem(helmetMCOR, "helmetMCOR");
+        GameRegistry.registerItem(chestplateMCOR, "chestplateMCOR");
+        GameRegistry.registerItem(leggingsMCOR, "leggingsMCOR");
+        GameRegistry.registerItem(bootsMCOR, "bootsMCOR");
 
 	}
 
