@@ -3,6 +3,8 @@ package universalteam.minefall.items.weapon;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.entity.projectile.EntityFireball;
+import net.minecraft.entity.projectile.EntitySnowball;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
@@ -21,7 +23,7 @@ public class ItemEVA8Shotgun extends Item
 	@Override
 	public void registerIcons(IIconRegister par1IconRegister)
 	{
-		this.itemIcon = par1IconRegister.registerIcon(ModReference.MODID + ":r_101C_Carbine");
+		this.itemIcon = par1IconRegister.registerIcon(ModReference.MODID + ":eVA8Shotgun");
 	}
 
 	@Override
@@ -33,8 +35,23 @@ public class ItemEVA8Shotgun extends Item
 			world.playSoundAtEntity(player, "random.bow", 0.5f, 0.4f / (itemRand.nextFloat() * 0.4f + 0.8f));
 
 		if (!world.isRemote)
-			world.spawnEntityInWorld(new EntityPlasmaBolt(world, player));
+			world.spawnEntityInWorld(new EntitySnowball(world, player) {
+            });
 
+            world.spawnEntityInWorld(new EntitySnowball(world, player) {
+            });
+
+            world.spawnEntityInWorld(new EntitySnowball(world, player) {
+            });
+
+            world.spawnEntityInWorld(new EntitySnowball(world, player) {
+            });
+
+            world.spawnEntityInWorld(new EntitySnowball(world, player) {
+            });
+
+            world.spawnEntityInWorld(new EntitySnowball(world, player) {
+            });
 		return par1ItemStack;
 
 	}

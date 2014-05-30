@@ -11,6 +11,8 @@ public class EntityPlasmaBolt extends EntityBulletBasic
 {
 	private float speed = 15f;
 
+    public int bulletShake = 0;
+
 	public EntityPlasmaBolt(World world)
 	{
 		super(world);
@@ -33,6 +35,18 @@ public class EntityPlasmaBolt extends EntityBulletBasic
 		this.motionZ *= speed;
 		return 0F;
 	}
+
+    protected void onImpact(MovingObjectPosition movingobjectposition) {
+        for (int i = 0; i < 8; ++i)
+        {
+            this.worldObj.spawnParticle("snowballpoof", this.posX, this.posY, this.posZ, 0.0D, 0.0D, 0.0D);
+        }
+
+        if (!this.worldObj.isRemote)
+        {
+            this.setDead();
+        }
+    }
 
 	@Override
 	public float getSpeed()
