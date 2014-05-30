@@ -1,6 +1,12 @@
 tile.energyPipe.name=Energy Pipe
 tile.cellT1.name=Cell Tier 1
 
-item.r_101C_Carbine.name=R_101C_Carbine
+item.rCarbine.name=R_101C_Carbine
+item.eVA8Shotgun.name=EVA-8 Shotgun
 item.plasmaAmmunition.name=Plasma Ammunition
 item.plasma.name=Plasma
+
+item.helmetIMC.name=IMC Pilot Helmet
+item.chestplateIMC.name=IMC Pilot Chestplate
+item.leggingsIMC.name=IMC Pilot Leggings
+item.bootsIMG.name=IMC Pilot Boots

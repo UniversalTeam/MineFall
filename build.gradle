@@ -17,18 +17,29 @@ buildscript {
 
 apply plugin: 'forge'
 
-version = "1.0"
-group= "minefall"
+ext.buildProps = file "build.properties"
+
+buildProps.withReader {
+    def prop = new Properties()
+    prop.load(it)
+    ext.config = new ConfigSlurper().parse prop
+}
+
+version = "${config.version.mod.major}.${config.version.mod.minor}.${config.version.mod.revision}"
+group= "universalteam.minefall"
 archivesBaseName = "MineFall"
 
 dependencies {
-    compile "codechicken:CodeChickenLib:1.7.2-1.1.1.80:dev"
-    compile "codechicken:ForgeMultipart:1.7.2-1.1.0.282:dev"
+    compile "codechicken:CodeChickenLib:${config.version.minecraft}-${config.version.CCL}:dev"
+    compile "codechicken:ForgeMultipart:${config.version.minecraft}-${config.version.FMP}:dev"
 }
 
 minecraft {
-    version = "1.7.2-10.12.1.1084"
+    version = "${config.version.minecraft}-${config.version.forge}"
     assetDir = "eclipse/assets"
+
+    replaceIn "universalteam.minefall.ModMineFall.java"
+    replace "@UCVERSION", config.version.UniversalCore
 }
 processResources
 {
@@ -43,5 +54,11 @@ processResources
     // copy everything else, thats not the mcmod.info
     from(sourceSets.main.resources.srcDirs) {
         exclude 'mcmod.info'
+    }
+}
+
+jar {
+    manifest {
+        attributes 'UCPluginListener': 'universalteam.minefall.compat.MFPluginListener'
     }
 }
