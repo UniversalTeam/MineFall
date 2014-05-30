@@ -6,10 +6,10 @@ import net.minecraft.block.Block;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemArmor;
+import net.minecraft.item.ItemArmor.ArmorMaterial;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.util.EnumHelper;
-import universalteam.minefall.armour.IMCArmour;
+import universalteam.minefall.armour.ItemArmorIMC;
 import universalteam.minefall.blocks.BlockCell;
 import universalteam.minefall.blocks.BlockEnergyPipe;
 import universalteam.minefall.compat.MFPluginListener;
@@ -75,7 +75,7 @@ public class CommonProxy
 	public static Item plasma;
 
     //Armours
-    public static ItemArmor.ArmorMaterial enumArmourMaterialIMC = EnumHelper.addArmorMaterial("IMC", 33, new int[] {3, 8, 6, 3}, 10);
+    public static ArmorMaterial armourMaterialIMC = EnumHelper.addArmorMaterial("IMC", 33, new int[] {3, 8, 6, 3}, 10);
 
     public static Item helmetIMC;
     public static Item chestplateIMC;
@@ -120,12 +120,11 @@ public class CommonProxy
 		plasmaAmmunition = new ItemPlasmaAmmunition();
 		plasma = new ItemPlasma();
 
-        //Armours
         RenderingRegistry.addNewArmourRendererPrefix("5");
-        helmetIMC = new IMCArmour(CommonProxy.enumArmourMaterialIMC, 5, 0).setUnlocalizedName("helmetIMC").setCreativeTab(CreativeTabs.tabCombat);
-        chestplateIMC = new IMCArmour(CommonProxy.enumArmourMaterialIMC, 5, 1).setUnlocalizedName("chestplateIMC").setCreativeTab(CreativeTabs.tabCombat);
-        leggingsIMC = new IMCArmour(CommonProxy.enumArmourMaterialIMC, 5, 2).setUnlocalizedName("leggingsIMC").setCreativeTab(CreativeTabs.tabCombat);
-        bootsIMC = new IMCArmour(CommonProxy.enumArmourMaterialIMC, 5, 3).setUnlocalizedName("bootsIMC").setCreativeTab(CreativeTabs.tabCombat);
+        helmetIMC = new ItemArmorIMC(CommonProxy.armourMaterialIMC, 5, 0);
+        chestplateIMC = new ItemArmorIMC(CommonProxy.armourMaterialIMC, 5, 1);
+        leggingsIMC = new ItemArmorIMC(CommonProxy.armourMaterialIMC, 5, 2);
+        bootsIMC = new ItemArmorIMC(CommonProxy.armourMaterialIMC, 5, 3);
 
 
         GameRegistry.registerItem(plasmaAmmunition, "plasmaAmmuntion");
@@ -133,7 +132,6 @@ public class CommonProxy
 		GameRegistry.registerItem(eVA8Shotgun, "eVA8Shotgun");
 		GameRegistry.registerItem(plasma, "plasma");
 
-        //Armours
         GameRegistry.registerItem(helmetIMC, "helmetIMC");
         GameRegistry.registerItem(chestplateIMC, "chestplateIMC");
         GameRegistry.registerItem(leggingsIMC, "leggingsIMC");
