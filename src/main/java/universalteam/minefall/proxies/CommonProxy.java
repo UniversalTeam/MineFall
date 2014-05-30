@@ -74,8 +74,8 @@ public class CommonProxy
 	public static Item plasmaAmmunition;
 	public static Item plasma;
 
-    //Armours
-    public static ArmorMaterial armourMaterialIMC = EnumHelper.addArmorMaterial("IMC", 33, new int[] {3, 8, 6, 3}, 10);
+    //Armors
+    public static ArmorMaterial armorMaterialIMC = EnumHelper.addArmorMaterial("IMC", 33, new int[] {3, 8, 6, 3}, 10);
 
     public static Item helmetIMC;
     public static Item chestplateIMC;
@@ -121,10 +121,10 @@ public class CommonProxy
 		plasma = new ItemPlasma();
 
         RenderingRegistry.addNewArmourRendererPrefix("5");
-        helmetIMC = new ItemArmorIMC(CommonProxy.armourMaterialIMC, 5, 0);
-        chestplateIMC = new ItemArmorIMC(CommonProxy.armourMaterialIMC, 5, 1);
-        leggingsIMC = new ItemArmorIMC(CommonProxy.armourMaterialIMC, 5, 2);
-        bootsIMC = new ItemArmorIMC(CommonProxy.armourMaterialIMC, 5, 3);
+        helmetIMC = new ItemArmorIMC(CommonProxy.armorMaterialIMC, 5, 0);
+        chestplateIMC = new ItemArmorIMC(CommonProxy.armorMaterialIMC, 5, 1);
+        leggingsIMC = new ItemArmorIMC(CommonProxy.armorMaterialIMC, 5, 2);
+        bootsIMC = new ItemArmorIMC(CommonProxy.armorMaterialIMC, 5, 3);
 
 
         GameRegistry.registerItem(plasmaAmmunition, "plasmaAmmuntion");
