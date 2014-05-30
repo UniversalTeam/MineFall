@@ -1,10 +1,15 @@
 package universalteam.minefall.proxies;
 
+import cpw.mods.fml.client.registry.RenderingRegistry;
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.block.Block;
+import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemStack;
+import net.minecraftforge.common.util.EnumHelper;
+import universalteam.minefall.armour.IMCArmour;
 import universalteam.minefall.blocks.BlockCell;
 import universalteam.minefall.blocks.BlockEnergyPipe;
 import universalteam.minefall.compat.MFPluginListener;
@@ -20,6 +25,7 @@ public class CommonProxy
 	public static Block energyPipe;
 	public static Block cellT1;
 
+    //Weapons
 	public static Item rCarbine;
 	public static Item rCompactSMG;
 	public static Item smartPistolMk5;
@@ -64,9 +70,17 @@ public class CommonProxy
 	public static Item guardianChip;
 	public static Item theIcepick;
 
+    //Ammo
 	public static Item plasmaAmmunition;
-
 	public static Item plasma;
+
+    //Armours
+    public static ItemArmor.ArmorMaterial enumArmourMaterialIMC = EnumHelper.addArmorMaterial("IMC", 33, new int[] {3, 8, 6, 3}, 10);
+
+    public static Item helmetIMC;
+    public static Item chestplateIMC;
+    public static Item leggingsIMC;
+    public static Item bootsIMC;
 
 	public void preInit()
 	{
@@ -106,10 +120,25 @@ public class CommonProxy
 		plasmaAmmunition = new ItemPlasmaAmmunition();
 		plasma = new ItemPlasma();
 
-		GameRegistry.registerItem(plasmaAmmunition, "plasmaAmmuntion");
+        //Armours
+        RenderingRegistry.addNewArmourRendererPrefix("5");
+        helmetIMC = new IMCArmour(CommonProxy.enumArmourMaterialIMC, 5, 0).setUnlocalizedName("helmetIMC").setCreativeTab(CreativeTabs.tabCombat);
+        chestplateIMC = new IMCArmour(CommonProxy.enumArmourMaterialIMC, 5, 1).setUnlocalizedName("chestplateIMC").setCreativeTab(CreativeTabs.tabCombat);
+        leggingsIMC = new IMCArmour(CommonProxy.enumArmourMaterialIMC, 5, 2).setUnlocalizedName("leggingsIMC").setCreativeTab(CreativeTabs.tabCombat);
+        bootsIMC = new IMCArmour(CommonProxy.enumArmourMaterialIMC, 5, 3).setUnlocalizedName("bootsIMC").setCreativeTab(CreativeTabs.tabCombat);
+
+
+        GameRegistry.registerItem(plasmaAmmunition, "plasmaAmmuntion");
 		GameRegistry.registerItem(rCarbine, "rCarbine");
 		GameRegistry.registerItem(eVA8Shotgun, "eVA8Shotgun");
 		GameRegistry.registerItem(plasma, "plasma");
+
+        //Armours
+        GameRegistry.registerItem(helmetIMC, "helmetIMC");
+        GameRegistry.registerItem(chestplateIMC, "chestplateIMC");
+        GameRegistry.registerItem(leggingsIMC, "leggingsIMC");
+        GameRegistry.registerItem(bootsIMC, "bootsIMC");
+
 	}
 
 	public void initRecipes()
