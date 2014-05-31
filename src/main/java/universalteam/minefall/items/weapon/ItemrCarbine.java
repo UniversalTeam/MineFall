@@ -28,7 +28,9 @@ public class ItemrCarbine extends Item
 	public ItemStack onItemRightClick(ItemStack par1ItemStack, World world, EntityPlayer player)
 	{
 		if (player.capabilities.isCreativeMode || player.inventory.consumeInventoryItem(CommonProxy.plasmaAmmunition))
+		{
 //			--par1ItemStack.stackSize;
+		}
 
 		world.playSoundAtEntity(player, "random.bow", 0.5f, 0.4f / (itemRand.nextFloat() * 0.4f + 0.8f));
 

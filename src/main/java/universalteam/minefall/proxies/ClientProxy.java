@@ -3,7 +3,7 @@ package universalteam.minefall.proxies;
 import cpw.mods.fml.client.registry.ClientRegistry;
 import cpw.mods.fml.client.registry.RenderingRegistry;
 import net.minecraftforge.client.MinecraftForgeClient;
-import universalteam.minefall.client.render.item.RenderBulletBasic;
+import universalteam.minefall.client.render.entity.RenderBulletBasic;
 import universalteam.minefall.client.render.item.RenderItemShotgun;
 import universalteam.minefall.client.render.tile.TESRCell;
 import universalteam.minefall.client.render.tile.TESRPipe;
@@ -47,6 +47,6 @@ public class ClientProxy extends CommonProxy
 	public void initItemRenders()
 	{
 		MinecraftForgeClient.registerItemRenderer(eVA8Shotgun, new RenderItemShotgun());
-        RenderingRegistry.registerEntityRenderingHandler(EntityBulletBasic.class, new RenderBulletBasic());
+		RenderingRegistry.registerEntityRenderingHandler(EntityBulletBasic.class, new RenderBulletBasic());
 	}
 }

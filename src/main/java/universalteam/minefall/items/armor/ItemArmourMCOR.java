@@ -1,4 +1,4 @@
-package universalteam.minefall.armour;
+package universalteam.minefall.items.armor;
 
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.creativetab.CreativeTabs;
@@ -10,9 +10,9 @@ import universalteam.minefall.proxies.CommonProxy;
 public class ItemArmourMCOR extends ItemArmor {
     private int armorType;
 
-    public ItemArmourMCOR(ItemArmor.ArmorMaterial armourmaterial, int renderIndex, int armorType)
+    public ItemArmourMCOR(ItemArmor.ArmorMaterial armorMaterial, int renderIndex, int armorType)
     {
-        super(armourmaterial, renderIndex, armorType);
+        super(armorMaterial, renderIndex, armorType);
         this.setCreativeTab(CreativeTabs.tabCombat);
         this.armorType = armorType;
     }

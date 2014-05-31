@@ -1,4 +1,4 @@
-package universalteam.minefall.armour;
+package universalteam.minefall.items.armor;
 
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.creativetab.CreativeTabs;
@@ -11,9 +11,9 @@ public class ItemArmorIMC extends ItemArmor
 {
 	private int armorType;
 
-	public ItemArmorIMC(ArmorMaterial armourmaterial2, int renderIndex, int armorType)
+	public ItemArmorIMC(ArmorMaterial armorMaterial, int renderIndex, int armorType)
 	{
-		super(armourmaterial2, renderIndex, armorType);
+		super(armorMaterial, renderIndex, armorType);
 		this.setCreativeTab(CreativeTabs.tabCombat);
 		this.armorType = armorType;
 	}
