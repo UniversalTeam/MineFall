@@ -25,34 +25,31 @@ buildProps.withReader {
     ext.config = new ConfigSlurper().parse prop
 }
 
-version = "${config.version.mod.major}.${config.version.mod.minor}.${config.version.mod.revision}"
+version = "${config.version.mod}"
 group= "universalteam.minefall"
 archivesBaseName = "MineFall"
 
 dependencies {
+    git compile project(":UniversalCore")
     compile "codechicken:CodeChickenLib:${config.version.minecraft}-${config.version.CCL}:dev"
     compile "codechicken:ForgeMultipart:${config.version.minecraft}-${config.version.FMP}:dev"
-    compile project(":UniversalCore")
 }
 
 minecraft {
     version = "${config.version.minecraft}-${config.version.forge}"
     assetDir = "eclipse/assets"
 
-    replaceIn "universalteam.minefall.ModMineFall.java"
-    replace "@UCVERSION", config.version.UniversalCore
+    replaceIn "universalteam.minefall.libs.ModReference.java"
+    replace "@VERSION@", config.version.mod
 }
 processResources
 {
-    // replace stuff in mcmod.info, nothing else
     from(sourceSets.main.resources.srcDirs) {
         include 'mcmod.info'
                 
-        // replace version and mcversion
         expand 'version':project.version, 'mcversion':project.minecraft.version
     }
         
-    // copy everything else, thats not the mcmod.info
     from(sourceSets.main.resources.srcDirs) {
         exclude 'mcmod.info'
     }
