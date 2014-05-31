@@ -1,6 +1,5 @@
 package universalteam.minefall.proxies;
 
-import cpw.mods.fml.client.registry.RenderingRegistry;
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.block.Block;
 import net.minecraft.init.Items;
@@ -8,13 +7,13 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemArmor.ArmorMaterial;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.util.EnumHelper;
+import universalteam.minefall.ModMineFall;
 import universalteam.minefall.blocks.BlockCell;
 import universalteam.minefall.blocks.BlockEnergyPipe;
 import universalteam.minefall.compat.MFPluginListener;
 import universalteam.minefall.items.ammunition.ItemPlasma;
 import universalteam.minefall.items.ammunition.ItemPlasmaAmmunition;
-import universalteam.minefall.items.armor.ItemArmorIMC;
-import universalteam.minefall.items.armor.ItemArmourMCOR;
+import universalteam.minefall.items.armor.ItemArmorBasic;
 import universalteam.minefall.items.weapon.ItemEVA8Shotgun;
 import universalteam.minefall.items.weapon.ItemrCarbine;
 import universalteam.minefall.tileentity.TileCell;
@@ -25,7 +24,7 @@ public class CommonProxy
 	public static Block energyPipe;
 	public static Block cellT1;
 
-    //Weapons
+	//Weapons
 	public static Item rCarbine;
 	public static Item rCompactSMG;
 	public static Item smartPistolMk5;
@@ -70,27 +69,29 @@ public class CommonProxy
 	public static Item guardianChip;
 	public static Item theIcepick;
 
-    //Ammo
+	//Ammo
 	public static Item plasmaAmmunition;
 	public static Item plasma;
 
-    //Armors
-    public static ArmorMaterial armorMaterialIMC = EnumHelper.addArmorMaterial("IMC", 33, new int[] {3, 8, 6, 3}, 10);
-    public static ArmorMaterial armorMaterialMCOR = EnumHelper.addArmorMaterial("MCOR", 33, new int[] {3, 8, 6, 3}, 10);
+	//Armors
+	public static ArmorMaterial armorMaterialIMC;
+	public static ArmorMaterial armorMaterialMCOR;
 
-    public static Item helmetIMC;
-    public static Item chestplateIMC;
-    public static Item leggingsIMC;
-    public static Item bootsIMC;
+	public static Item helmetIMC;
+	public static Item chestPlateIMC;
+	public static Item leggingsIMC;
+	public static Item bootsIMC;
 
-    public static Item helmetMCOR;
-    public static Item chestplateMCOR;
-    public static Item leggingsMCOR;
-    public static Item bootsMCOR;
+	public static Item helmetMCOR;
+	public static Item chestPlateMCOR;
+	public static Item leggingsMCOR;
+	public static Item bootsMCOR;
 
 	public void preInit()
 	{
 		initBlocks();
+
+		initArmorMaterials();
 
 		initItems();
 
@@ -107,7 +108,7 @@ public class CommonProxy
 
 	}
 
-	public void initBlocks()
+	protected void initBlocks()
 	{
 		energyPipe = new BlockEnergyPipe();
 		cellT1 = new BlockCell();
@@ -119,44 +120,49 @@ public class CommonProxy
 		GameRegistry.registerTileEntity(TileCell.class, "cell");
 	}
 
-	public void initItems()
+	protected void initArmorMaterials()
+	{
+		armorMaterialIMC = EnumHelper.addArmorMaterial("IMC", 33, new int[]{3, 8, 6, 3}, 10);
+		armorMaterialMCOR = EnumHelper.addArmorMaterial("MCOR", 33, new int[]{3, 8, 6, 3}, 10);
+	}
+
+	protected void initItems()
 	{
 		rCarbine = new ItemrCarbine();
 		eVA8Shotgun = new ItemEVA8Shotgun();
 		plasmaAmmunition = new ItemPlasmaAmmunition();
 		plasma = new ItemPlasma();
 
-        RenderingRegistry.addNewArmourRendererPrefix("5");
-        helmetIMC = new ItemArmorIMC(CommonProxy.armorMaterialIMC, 5, 0);
-        chestplateIMC = new ItemArmorIMC(CommonProxy.armorMaterialIMC, 5, 1);
-        leggingsIMC = new ItemArmorIMC(CommonProxy.armorMaterialIMC, 5, 2);
-        bootsIMC = new ItemArmorIMC(CommonProxy.armorMaterialIMC, 5, 3);
+		int IMCRenderIndex = ModMineFall.proxy.registerArmor("IMC");
+		helmetIMC = new ItemArmorBasic(armorMaterialIMC, IMCRenderIndex, 0, "helmetIMC", "imc");
+		chestPlateIMC = new ItemArmorBasic(armorMaterialIMC, IMCRenderIndex, 1, "chestPlateIMC", "imc");
+		leggingsIMC = new ItemArmorBasic(armorMaterialIMC, IMCRenderIndex, 2, "leggingsIMC", "imc");
+		bootsIMC = new ItemArmorBasic(armorMaterialIMC, IMCRenderIndex, 3, "bootsIMC", "imc");
 
-        RenderingRegistry.addNewArmourRendererPrefix("6");
-        helmetMCOR = new ItemArmourMCOR(CommonProxy.armorMaterialMCOR, 6, 0);
-        chestplateMCOR = new ItemArmourMCOR(CommonProxy.armorMaterialMCOR, 6, 1);
-        leggingsMCOR = new ItemArmourMCOR(CommonProxy.armorMaterialMCOR, 6, 2);
-        bootsMCOR = new ItemArmourMCOR(CommonProxy.armorMaterialMCOR, 6, 3);
+		int MCORRenderIndex = ModMineFall.proxy.registerArmor("MCOR");
+		helmetMCOR = new ItemArmorBasic(armorMaterialMCOR, MCORRenderIndex, 0, "helmetMCOR", "mcor");
+		chestPlateMCOR = new ItemArmorBasic(armorMaterialMCOR, MCORRenderIndex, 1, "chestPlateMCOR", "mcor");
+		leggingsMCOR = new ItemArmorBasic(armorMaterialMCOR, MCORRenderIndex, 2, "leggingsMCOR", "mcor");
+		bootsMCOR = new ItemArmorBasic(armorMaterialMCOR, MCORRenderIndex, 3, "bootsMCOR", "mcor");
 
-
-        GameRegistry.registerItem(plasmaAmmunition, "plasmaAmmuntion");
+		GameRegistry.registerItem(plasmaAmmunition, "plasmaAmmuntion");
 		GameRegistry.registerItem(rCarbine, "rCarbine");
 		GameRegistry.registerItem(eVA8Shotgun, "eVA8Shotgun");
 		GameRegistry.registerItem(plasma, "plasma");
 
-        GameRegistry.registerItem(helmetIMC, "helmetIMC");
-        GameRegistry.registerItem(chestplateIMC, "chestplateIMC");
-        GameRegistry.registerItem(leggingsIMC, "leggingsIMC");
-        GameRegistry.registerItem(bootsIMC, "bootsIMC");
+		GameRegistry.registerItem(helmetIMC, "helmetIMC");
+		GameRegistry.registerItem(chestPlateIMC, "chestplateIMC");
+		GameRegistry.registerItem(leggingsIMC, "leggingsIMC");
+		GameRegistry.registerItem(bootsIMC, "bootsIMC");
 
-        GameRegistry.registerItem(helmetMCOR, "helmetMCOR");
-        GameRegistry.registerItem(chestplateMCOR, "chestplateMCOR");
-        GameRegistry.registerItem(leggingsMCOR, "leggingsMCOR");
-        GameRegistry.registerItem(bootsMCOR, "bootsMCOR");
+		GameRegistry.registerItem(helmetMCOR, "helmetMCOR");
+		GameRegistry.registerItem(chestPlateMCOR, "chestplateMCOR");
+		GameRegistry.registerItem(leggingsMCOR, "leggingsMCOR");
+		GameRegistry.registerItem(bootsMCOR, "bootsMCOR");
 
 	}
 
-	public void initRecipes()
+	protected void initRecipes()
 	{
 		GameRegistry.addRecipe(new ItemStack(plasmaAmmunition, 16),
 				"yxy",
@@ -168,5 +174,10 @@ public class CommonProxy
 				"xzx",
 				"yxy",
 				'y', Items.blaze_powder, 'x', Items.gunpowder, 'z', Items.ender_pearl);
+	}
+
+	public int registerArmor(String armor)
+	{
+		return 0;
 	}
 }

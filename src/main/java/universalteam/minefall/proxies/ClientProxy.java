@@ -38,15 +38,21 @@ public class ClientProxy extends CommonProxy
 		super.postInit();
 	}
 
-	public void initTESRs()
+	protected void initTESRs()
 	{
 		ClientRegistry.bindTileEntitySpecialRenderer(TileEnergyPipe.class, new TESRPipe());
 		ClientRegistry.bindTileEntitySpecialRenderer(TileCell.class, new TESRCell());
 	}
 
-	public void initItemRenders()
+	protected void initItemRenders()
 	{
 		MinecraftForgeClient.registerItemRenderer(eVA8Shotgun, new RenderItemShotgun());
 		RenderingRegistry.registerEntityRenderingHandler(EntityBulletBasic.class, new RenderBulletBasic());
+	}
+
+	@Override
+	public int registerArmor(String armor)
+	{
+		return RenderingRegistry.addNewArmourRendererPrefix(armor);
 	}
 }

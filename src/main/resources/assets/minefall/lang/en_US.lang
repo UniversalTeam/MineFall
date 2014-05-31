@@ -7,6 +7,11 @@ item.plasmaAmmunition.name=Plasma Ammunition
 item.plasma.name=Plasma
 
 item.helmetIMC.name=IMC Pilot Helmet
-item.chestplateIMC.name=IMC Pilot Chestplate
+item.chestPlateIMC.name=IMC Pilot ChestPlate
 item.leggingsIMC.name=IMC Pilot Leggings
-item.bootsIMG.name=IMC Pilot Boots
+item.bootsIMC.name=IMC Pilot Boots
+
+item.helmetMCOR.name=MCOR Pilot Helmet
+item.chestPlateMCOR.name=MCOR Pilot ChestPlate
+item.leggingsMCOR.name=MCOR Pilot Leggings
+item.bootsMCOR.name=MCOR Pilot Boots
