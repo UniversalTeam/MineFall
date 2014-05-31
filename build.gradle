@@ -30,7 +30,7 @@ group= "universalteam.minefall"
 archivesBaseName = "MineFall"
 
 dependencies {
-    git compile project(":UniversalCore")
+    compile project(":UniversalCore")
     compile "codechicken:CodeChickenLib:${config.version.minecraft}-${config.version.CCL}:dev"
     compile "codechicken:ForgeMultipart:${config.version.minecraft}-${config.version.FMP}:dev"
 }
