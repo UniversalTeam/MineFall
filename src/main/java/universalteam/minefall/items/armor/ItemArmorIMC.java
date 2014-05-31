@@ -5,17 +5,18 @@ import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.Entity;
 import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemStack;
+import universalteam.minefall.libs.ModReference;
 import universalteam.minefall.proxies.CommonProxy;
 
 public class ItemArmorIMC extends ItemArmor
 {
 	private int armorType;
 
-	public ItemArmorIMC(ArmorMaterial armorMaterial, int renderIndex, int armorType)
+	public ItemArmorIMC(ArmorMaterial armorMaterial, int renderIndex, int armortype)
 	{
-		super(armorMaterial, renderIndex, armorType);
+		super(armorMaterial, renderIndex, armortype);
 		this.setCreativeTab(CreativeTabs.tabCombat);
-		this.armorType = armorType;
+		this.armorType = armortype;
 	}
 
 	@Override
@@ -40,9 +41,9 @@ public class ItemArmorIMC extends ItemArmor
 	public String getArmorTexture(ItemStack stack, Entity entity, int slot, String layer)
 	{
 		if (slot == 2)
-			return "minefall:example.png";
+			return ModReference.MODID + ":IMC_Armor2.png";
 
-		return "minefall:example.png";
+		return ModReference.MODID + ":IMC_Armor1.png";
 	}
 
 	@Override
