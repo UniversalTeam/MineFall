@@ -17,9 +17,10 @@ public class ItemArmorIMC extends ItemArmor
 		super(armorMaterial, renderIndex, armortype);
 		this.setCreativeTab(CreativeTabs.tabCombat);
 		this.armorType = armortype;
+		this.setUnlocalizedName("test");
 	}
 
-	@Override
+	/*@Override
 	public String getUnlocalizedName()
 	{
 		switch (armorType)
@@ -35,15 +36,15 @@ public class ItemArmorIMC extends ItemArmor
 			default:
 				return "";
 		}
-	}
+	}*/
 
 	@Override
 	public String getArmorTexture(ItemStack stack, Entity entity, int slot, String layer)
 	{
 		if (slot == 2)
-			return ModReference.MODID + ":IMC_Armor2.png";
+			return ModReference.MODID + ":textures/models/armor/imc_layer_2.png";
 
-		return ModReference.MODID + ":IMC_Armor1.png";
+		return ModReference.MODID + ":textures/models/armor/imc_layer_2.png";
 	}
 
 	@Override
