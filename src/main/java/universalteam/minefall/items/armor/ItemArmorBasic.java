@@ -6,6 +6,7 @@ import net.minecraft.entity.Entity;
 import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemStack;
 import universalteam.minefall.libs.ModReference;
+import universalteam.minefall.proxies.CommonProxy;
 
 public class ItemArmorBasic extends ItemArmor
 {
@@ -16,7 +17,7 @@ public class ItemArmorBasic extends ItemArmor
 	{
 		super(armorMaterial, renderIndex, armorType);
 		this.setUnlocalizedName(unlocalizedName);
-		this.setCreativeTab(CreativeTabs.tabFood);
+		this.setCreativeTab(CommonProxy.minefallTabWeapons);
 		this.unlocalizedName = unlocalizedName;
 		this.layerName = layerName;
 	}

@@ -1,7 +1,7 @@
 package universalteam.minefall.items.ammunition;
 
-import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
+import universalteam.minefall.proxies.CommonProxy;
 
 public class ItemPlasma extends Item
 {
@@ -9,6 +9,6 @@ public class ItemPlasma extends Item
 	{
 		this.setUnlocalizedName("plasma");
 		this.setHasSubtypes(true);
-		this.setCreativeTab(CreativeTabs.tabCombat);
+		this.setCreativeTab(CommonProxy.minefallTabCrafting);
 	}
 }

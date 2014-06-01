@@ -1,7 +1,6 @@
 package universalteam.minefall.items.weapon;
 
 import net.minecraft.client.renderer.texture.IIconRegister;
-import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.projectile.EntitySnowball;
 import net.minecraft.item.Item;
@@ -15,7 +14,7 @@ public class ItemEVA8Shotgun extends Item
 	public ItemEVA8Shotgun()
 	{
 		this.setUnlocalizedName("eVA8Shotgun");
-		this.setCreativeTab(CreativeTabs.tabCombat);
+		this.setCreativeTab(CommonProxy.minefallTabWeapons);
 	}
 
 	@Override

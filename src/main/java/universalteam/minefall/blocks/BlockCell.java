@@ -2,9 +2,9 @@ package universalteam.minefall.blocks;
 
 import net.minecraft.block.BlockContainer;
 import net.minecraft.block.material.Material;
-import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.World;
+import universalteam.minefall.proxies.CommonProxy;
 import universalteam.minefall.tileentity.TileCell;
 
 public class BlockCell extends BlockContainer
@@ -13,7 +13,7 @@ public class BlockCell extends BlockContainer
 	{
 		super(Material.glass);
 		this.setHardness(10.0F);
-		this.setCreativeTab(CreativeTabs.tabBlock);
+		this.setCreativeTab(CommonProxy.minefallTabPower);
 		this.setBlockName("cellT1");
 	}
 

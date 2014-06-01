@@ -1,7 +1,6 @@
 package universalteam.minefall.items.weapon;
 
 import net.minecraft.client.renderer.texture.IIconRegister;
-import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -15,7 +14,7 @@ public class ItemrCarbine extends Item
 	public ItemrCarbine()
 	{
 		this.setUnlocalizedName("rCarbine");
-		this.setCreativeTab(CreativeTabs.tabCombat);
+		this.setCreativeTab(CommonProxy.minefallTabWeapons);
 	}
 
 	@Override
