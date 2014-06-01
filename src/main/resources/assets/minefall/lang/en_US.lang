@@ -15,3 +15,8 @@ item.helmetMCOR.name=MCOR Pilot Helmet
 item.chestPlateMCOR.name=MCOR Pilot ChestPlate
 item.leggingsMCOR.name=MCOR Pilot Leggings
 item.bootsMCOR.name=MCOR Pilot Boots
+
+itemGroup.minefallTabWeapons=MineFall Weapons
+itemGroup.minefallTabCrafting=MineFall Crafting
+itemGroup.minefallTabBlocks=MineFall Blocks
+itemGroup.minefallTabPower=MineFall Power

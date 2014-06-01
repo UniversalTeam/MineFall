@@ -2,6 +2,7 @@ package universalteam.minefall.proxies;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.block.Block;
+import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemArmor.ArmorMaterial;
@@ -180,4 +181,32 @@ public class CommonProxy
 	{
 		return 0;
 	}
+
+        public static CreativeTabs minefallTabWeapons = new CreativeTabs("minefallTabWeapons") {
+            @Override
+            public Item getTabIconItem() {
+                return new Item();
+            }
+        };
+
+        public static CreativeTabs minefallTabCrafting = new CreativeTabs("minefallTabCrafting") {
+            @Override
+            public Item getTabIconItem() {
+                return new Item();
+            }
+        };
+
+        public static CreativeTabs minefallTabBlocks = new CreativeTabs("minefallTabBlocks") {
+            @Override
+            public Item getTabIconItem() {
+                return new Item();
+            }
+        };
+
+        public static CreativeTabs minefallTabPower = new CreativeTabs("minefallTabPower") {
+            @Override
+            public Item getTabIconItem() {
+                return new Item();
+            }
+        };
 }

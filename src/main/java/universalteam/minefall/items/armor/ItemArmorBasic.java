@@ -16,7 +16,7 @@ public class ItemArmorBasic extends ItemArmor
 	{
 		super(armorMaterial, renderIndex, armorType);
 		this.setUnlocalizedName(unlocalizedName);
-		this.setCreativeTab(CreativeTabs.tabCombat);
+		this.setCreativeTab(CreativeTabs.tabFood);
 		this.unlocalizedName = unlocalizedName;
 		this.layerName = layerName;
 	}

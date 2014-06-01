@@ -11,6 +11,7 @@ import universalteam.minefall.proxies.CommonProxy;
 @Mod(modid = ModReference.MODID, name = ModReference.MODNAME, version = ModReference.VERSION, dependencies = "required-after:UniversalCore")
 public class ModMineFall
 {
+
 	@SidedProxy(clientSide = "universalteam.minefall.proxies.ClientProxy", serverSide = "universalteam.minefall.proxies.CommonProxy")
 	public static CommonProxy proxy;
 
