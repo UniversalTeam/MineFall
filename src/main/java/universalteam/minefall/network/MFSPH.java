@@ -15,7 +15,7 @@ public class MFSPH implements IClientPacketHandler
 	{
 		switch (packet.getType())
 		{
-			git 
+			
 		}
 	}
 }
