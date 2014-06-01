@@ -4,6 +4,7 @@ import io.netty.buffer.ByteBuf;
 import io.netty.channel.ChannelHandlerContext;
 import net.minecraft.entity.player.EntityPlayer;
 
+@Deprecated
 public abstract class AbstractPacket
 {
 	public abstract void encodeInto(ChannelHandlerContext ctx, ByteBuf buffer);

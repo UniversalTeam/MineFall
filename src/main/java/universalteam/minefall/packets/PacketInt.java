@@ -6,6 +6,7 @@ import io.netty.channel.ChannelHandlerContext;
 import net.minecraft.world.World;
 import universalteam.minefall.libs.ModReference;
 
+@Deprecated
 public abstract class PacketInt extends AbstractPacket
 {
 	protected int x, y, z;

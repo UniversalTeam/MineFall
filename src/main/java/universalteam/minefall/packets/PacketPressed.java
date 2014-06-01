@@ -4,6 +4,7 @@ import io.netty.buffer.ByteBuf;
 import io.netty.channel.ChannelHandlerContext;
 import net.minecraft.entity.player.EntityPlayer;
 
+@Deprecated
 public class PacketPressed extends AbstractPacket
 {
 	private int keyIndex;

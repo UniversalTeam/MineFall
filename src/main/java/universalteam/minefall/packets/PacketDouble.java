@@ -6,6 +6,7 @@ import io.netty.channel.ChannelHandlerContext;
 import net.minecraft.world.World;
 import universalteam.minefall.libs.ModReference;
 
+@Deprecated
 public abstract class PacketDouble extends AbstractPacket
 {
 	protected double x, y, z;

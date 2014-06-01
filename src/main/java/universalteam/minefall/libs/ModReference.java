@@ -8,5 +8,6 @@ public class ModReference
 
 	public static final String CHANNEL = MODID;
 
+	@Deprecated
 	public static final int PACKET_UPDATER = 32;
 }

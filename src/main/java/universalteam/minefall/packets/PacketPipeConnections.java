@@ -26,6 +26,7 @@ import java.util.EnumMap;
 import java.util.LinkedList;
 import java.util.List;
 
+@Deprecated
 @ChannelHandler.Sharable
 public class PacketPipeConnections extends MessageToMessageCodec<FMLProxyPacket, AbstractPacket>
 {
