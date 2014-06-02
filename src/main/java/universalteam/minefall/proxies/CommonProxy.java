@@ -1,5 +1,6 @@
 package universalteam.minefall.proxies;
 
+import codechicken.lib.packet.PacketCustom;
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.block.Block;
 import net.minecraft.creativetab.CreativeTabs;
@@ -17,6 +18,7 @@ import universalteam.minefall.items.ammunition.ItemPlasmaAmmunition;
 import universalteam.minefall.items.armor.ItemArmorBasic;
 import universalteam.minefall.items.weapon.ItemEVA8Shotgun;
 import universalteam.minefall.items.weapon.ItemrCarbine;
+import universalteam.minefall.network.MFSPH;
 import universalteam.minefall.tileentity.TileCell;
 import universalteam.minefall.tileentity.TileEnergyPipe;
 
@@ -101,6 +103,8 @@ public class CommonProxy
 
 	public void init()
 	{
+		PacketCustom.assignHandler(MFSPH.channel, new MFSPH());
+
 		MFPluginListener.handleCommon();
 	}
 

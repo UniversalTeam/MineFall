@@ -1,5 +1,6 @@
 package universalteam.minefall.proxies;
 
+import codechicken.lib.packet.PacketCustom;
 import cpw.mods.fml.client.registry.ClientRegistry;
 import cpw.mods.fml.client.registry.RenderingRegistry;
 import net.minecraftforge.client.MinecraftForgeClient;
@@ -9,6 +10,7 @@ import universalteam.minefall.client.render.tile.TESRCell;
 import universalteam.minefall.client.render.tile.TESRPipe;
 import universalteam.minefall.compat.MFPluginListener;
 import universalteam.minefall.entities.EntityBulletBasic;
+import universalteam.minefall.network.MFCPH;
 import universalteam.minefall.tileentity.TileCell;
 import universalteam.minefall.tileentity.TileEnergyPipe;
 
@@ -28,6 +30,8 @@ public class ClientProxy extends CommonProxy
 	public void init()
 	{
 		super.init();
+
+		PacketCustom.assignHandler(MFCPH.channel, new MFCPH());
 
 		MFPluginListener.handleClient();
 	}
