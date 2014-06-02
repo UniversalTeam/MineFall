@@ -17,7 +17,7 @@ public class ItemArmorBasic extends ItemArmor
 	{
 		super(armorMaterial, renderIndex, armorType);
 		this.setUnlocalizedName(unlocalizedName);
-		this.setCreativeTab(CommonProxy.minefallTabWeapons);
+		this.setCreativeTab(CommonProxy.tabWeapons);
 		this.unlocalizedName = unlocalizedName;
 		this.layerName = layerName;
 	}

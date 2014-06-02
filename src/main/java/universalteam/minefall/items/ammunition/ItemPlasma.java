@@ -9,6 +9,6 @@ public class ItemPlasma extends Item
 	{
 		this.setUnlocalizedName("plasma");
 		this.setHasSubtypes(true);
-		this.setCreativeTab(CommonProxy.minefallTabCrafting);
+		this.setCreativeTab(CommonProxy.tabCraftig);
 	}
 }

@@ -24,6 +24,11 @@ import universalteam.minefall.tileentity.TileEnergyPipe;
 
 public class CommonProxy
 {
+	public static CreativeTabs tabWeapons;
+	public static CreativeTabs tabCraftig;
+	public static CreativeTabs tabBlocks;
+	public static CreativeTabs tabPower;
+
 	public static Block energyPipe;
 	public static Block cellT1;
 
@@ -92,6 +97,8 @@ public class CommonProxy
 
 	public void preInit()
 	{
+		initCreativeTabs();
+
 		initBlocks();
 
 		initArmorMaterials();
@@ -111,6 +118,45 @@ public class CommonProxy
 	public void postInit()
 	{
 
+	}
+
+	protected void initCreativeTabs()
+	{
+		tabWeapons = new CreativeTabs("tabWeapons")
+		{
+			@Override
+			public Item getTabIconItem()
+			{
+				return rCarbine;
+			}
+		};
+
+		tabCraftig = new CreativeTabs("tabCrafting")
+		{
+			@Override
+			public Item getTabIconItem()
+			{
+				return plasma;
+			}
+		};
+
+		tabBlocks = new CreativeTabs("tabBlocks")
+		{
+			@Override
+			public Item getTabIconItem()
+			{
+				return new Item();
+			}
+		};
+
+		tabPower = new CreativeTabs("tabPower")
+		{
+			@Override
+			public Item getTabIconItem()
+			{
+				return new Item();
+			}
+		};
 	}
 
 	protected void initBlocks()
@@ -185,32 +231,4 @@ public class CommonProxy
 	{
 		return 0;
 	}
-
-        public static CreativeTabs minefallTabWeapons = new CreativeTabs("minefallTabWeapons") {
-            @Override
-            public Item getTabIconItem() {
-                return new Item();
-            }
-        };
-
-        public static CreativeTabs minefallTabCrafting = new CreativeTabs("minefallTabCrafting") {
-            @Override
-            public Item getTabIconItem() {
-                return new Item();
-            }
-        };
-
-        public static CreativeTabs minefallTabBlocks = new CreativeTabs("minefallTabBlocks") {
-            @Override
-            public Item getTabIconItem() {
-                return new Item();
-            }
-        };
-
-        public static CreativeTabs minefallTabPower = new CreativeTabs("minefallTabPower") {
-            @Override
-            public Item getTabIconItem() {
-                return new Item();
-            }
-        };
 }

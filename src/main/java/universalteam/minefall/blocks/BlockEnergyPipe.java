@@ -13,7 +13,7 @@ public class BlockEnergyPipe extends BlockContainer
 	{
 		super(Material.glass);
 		this.setHardness(2.0F);
-		this.setCreativeTab(CommonProxy.minefallTabPower);
+		this.setCreativeTab(CommonProxy.tabPower);
 		this.setBlockName("energyPipe");
 	}
 

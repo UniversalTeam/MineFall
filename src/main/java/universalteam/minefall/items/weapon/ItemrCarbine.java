@@ -14,7 +14,8 @@ public class ItemrCarbine extends Item
 	public ItemrCarbine()
 	{
 		this.setUnlocalizedName("rCarbine");
-		this.setCreativeTab(CommonProxy.minefallTabWeapons);
+		this.setCreativeTab(CommonProxy.tabWeapons);
+		this.setMaxStackSize(1);
 	}
 
 	@Override

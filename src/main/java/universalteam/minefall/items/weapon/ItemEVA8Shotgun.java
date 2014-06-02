@@ -14,7 +14,8 @@ public class ItemEVA8Shotgun extends Item
 	public ItemEVA8Shotgun()
 	{
 		this.setUnlocalizedName("eVA8Shotgun");
-		this.setCreativeTab(CommonProxy.minefallTabWeapons);
+		this.setCreativeTab(CommonProxy.tabWeapons);
+		this.setMaxStackSize(1);
 	}
 
 	@Override

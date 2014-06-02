@@ -13,7 +13,7 @@ public class BlockCell extends BlockContainer
 	{
 		super(Material.glass);
 		this.setHardness(10.0F);
-		this.setCreativeTab(CommonProxy.minefallTabPower);
+		this.setCreativeTab(CommonProxy.tabPower);
 		this.setBlockName("cellT1");
 	}
 
