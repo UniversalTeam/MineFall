@@ -7,13 +7,15 @@ import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import universalteam.minefall.libs.ModReference;
 import universalteam.minefall.proxies.CommonProxy;
+import universalteam.universalcore.utils.UCLogger;
 
 @Mod(modid = ModReference.MODID, name = ModReference.MODNAME, version = ModReference.VERSION, dependencies = "required-after:UniversalCore")
 public class ModMineFall
 {
-
 	@SidedProxy(clientSide = "universalteam.minefall.proxies.ClientProxy", serverSide = "universalteam.minefall.proxies.CommonProxy")
 	public static CommonProxy proxy;
+
+	public static UCLogger logger = new UCLogger(ModReference.MODID);
 
 	@Mod.Instance(ModReference.MODID)
 	public static ModMineFall instance;
