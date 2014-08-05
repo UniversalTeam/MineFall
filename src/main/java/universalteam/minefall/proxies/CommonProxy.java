@@ -33,53 +33,53 @@ public class CommonProxy
 	public static Block cellT1;
 
 	//Weapons
-	private static Item rCarbine;
-    private static Item rCompactSMG;
-    private static Item smartPistolMk5;
-    private static Item eVA8Shotgun;
-    private static Item longbowSniper;
-    private static Item SMG;
-    private static Item g2A4Rifle;
-    private static Item hemlok;
-    private static Item krabrSniper;
-    private static Item spitfireLMG;
+	public static Item rCarbine;
+	public static Item rCompactSMG;
+	public static Item smartPistolMk5;
+	public static Item eVA8Shotgun;
+	public static Item longbowSniper;
+	public static Item SMG;
+	public static Item g2A4Rifle;
+	public static Item hemlok;
+	public static Item krabrSniper;
+	public static Item spitfireLMG;
 
-    private static Item b3Wingman;
-    private static Item hammondP2;
-    private static Item rAutopistol;
+	public static Item b3Wingman;
+	public static Item hammondP2;
+	public static Item rAutopistol;
 
-    private static Item sideWinderSMR;
-    private static Item HeavyRocket;
-    private static Item mGL;
-    private static Item chargeRifle;
+	public static Item sideWinderSMR;
+	public static Item HeavyRocket;
+	public static Item mGL;
+	public static Item chargeRifle;
 
-    private static Item Knife;
-    private static Item fragGrenade;
-    private static Item satchelCharge;
-    private static Item arcGrenade;
-    private static Item arcMine;
+	public static Item Knife;
+	public static Item fragGrenade;
+	public static Item satchelCharge;
+	public static Item arcGrenade;
+	public static Item arcMine;
 
-    private static Item cloak;
-    private static Item stim;
-    private static Item activeRadarPulse;
+	public static Item cloak;
+	public static Item stim;
+	public static Item activeRadarPulse;
 
-    private static Item enhancedParkourKit;
-    private static Item explosivePack;
-    private static Item powerCell;
-    private static Item quickReloadKit;
-    private static Item runNGunKit;
-    private static Item stealthKit;
+	public static Item enhancedParkourKit;
+	public static Item explosivePack;
+	public static Item powerCell;
+	public static Item quickReloadKit;
+	public static Item runNGunKit;
+	public static Item stealthKit;
 
-    private static Item domeShieldBattery;
-    private static Item minionDetector;
-    private static Item warpfallTransmitter;
-    private static Item deadMansTrigger;
-    private static Item guardianChip;
-    private static Item theIcepick;
+	public static Item domeShieldBattery;
+	public static Item minionDetector;
+	public static Item warpfallTransmitter;
+	public static Item deadMansTrigger;
+	public static Item guardianChip;
+	public static Item theIcepick;
 
 	//Ammo
-    private static Item plasmaAmmunition;
-    private static Item plasma;
+	public static Item plasmaAmmunition;
+	public static Item plasma;
 
 	//Armors
 	public static ArmorMaterial armorMaterialIMC;
